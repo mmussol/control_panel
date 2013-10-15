@@ -14,7 +14,7 @@
         left: auto !important;
         }
       #popupPanel {
-        width: 550px;
+        width: 320px;
         border: 3px solid #000;
         margin: 10px;
         }
@@ -51,8 +51,8 @@
             <h1>StackMob ToDo</h1>
             <!-- //<a href="#add" data-role="button" data-icon="add" class="ui-btn-left">Add</a> -->
 
-            <a id="leftPanelTrigger" href="#leftPanel" data-role="button" data-inline="true" data-mini="true" data-icon="arrow-l" data-iconpos="left">Menu</a>
-            <a id="popupPanelTrigger" href="#popupPanel" data-rel="popup" data-position-to="window" data-role="button" class="ui-btn-right">Remote</a>
+            <a id="leftPanelTrigger" href="#leftPanel" data-role="button" data-icon="bars" data-iconpos="left">MENU</a>
+            <a id="popupPanelTrigger" href="#popupPanel" data-rel="popup" data-position-to="window" data-role="button" class="ui-btn-right" data-icon="grid">REMOTE</a>
         </div>
 
             <div data-role="panel" id="leftPanel" data-corners="true" data-theme="a" data-shadow="false" data-display="reveal">
@@ -82,36 +82,65 @@
             </div>
              
             <div data-role="popup" id="popupPanel" data-corners="true" data-theme="a" data-shadow="false" data-transition="slide" data-tolerance="70,70">
-              <div class="ui-grid-d"">
+              <div class="ui-grid-b"">
+                <div class="ui-block-a"><button data-theme="c" onclick="handleClick('FORMAT')">FMT</button></div>
+                <div class="ui-block-b"><button data-theme="c" onclick="handleClick('POWER')">PWR</button></div>
+                <div class="ui-block-c"><button data-theme="c" onclick="handleClick('PREV')">PREV</button></div>
+
+                <div class="ui-block-a"><button data-theme="c" onclick="handleClick('JUMP_B')">JMP B</button></div>
+                <div class="ui-block-b"><button data-theme="c" onclick="handleClick('STOP')">STOP</button></div>
+                <div class="ui-block-c"><button data-theme="c" onclick="handleClick('JUMP_F')">JMP F</button></div>
+
+                <div class="ui-block-a"><button data-theme="c" onclick="handleClick('REWIND')">REW</button></div>
+                <div class="ui-block-b"><button data-theme="c" onclick="handleClick('PLAY')">PLAY</button></div>
+                <div class="ui-block-c"><button data-theme="c" onclick="handleClick('FAST_FORWARD')">FF</button></div>
+
+                <div class="ui-block-a"><button data-theme="c" onclick="handleClick('PAUSE')">PAUSE</button></div>
+                <div class="ui-block-b"></div>
+                <div class="ui-block-c"><button data-theme="e" onclick="handleClick('RECORD')">REC</button></div>
+
                 <div class="ui-block-a"><button data-theme="b" onclick="handleClick('GUIDE')">GUIDE</button></div>
                 <div class="ui-block-b"><button data-theme="b" onclick="handleClick('LIST')">LIST</button></div>
-                <div class="ui-block-c"><button data-theme="b" onclick="handleClick('MENU')">MENU</button></div>
-                <div class="ui-block-d"><button data-theme="b" onclick="handleClick('INFO')">INFO</button></div>
-                <div class="ui-block-e"><button data-theme="b" onclick="handleClick('EXIT')">EXIT</button></div>
+                <div class="ui-block-c"><button data-theme="b" onclick="handleClick('EXIT')">EXIT</button></div>
 
+                <div class="ui-block-a"></div>
+                <div class="ui-block-b"><button data-theme="a" onclick="handleClick('UP')" data-icon="arrow-u" data-iconpos="right">UP</button></div>
+                <div class="ui-block-c"></div>
+
+                <div class="ui-block-a"><button data-theme="a" onclick="handleClick('LEFT')" data-icon="arrow-l" data-iconpos="left">LT</button></div>
+                <div class="ui-block-b"><button data-theme="e" onclick="handleClick('SELECT')">SEL</button></div>
+                <div class="ui-block-c"><button data-theme="a" onclick="handleClick('RIGHT')" data-icon="arrow-r" data-iconpos="right">RT</button></div>
+
+                <div class="ui-block-a"></div>
+                <div class="ui-block-b"><button data-theme="a" onclick="handleClick('DOWN')" data-icon="arrow-d" data-iconpos="right">DN</button></div>
+                <div class="ui-block-c"></div>
+
+                <div class="ui-block-a"><button data-theme="b" onclick="handleClick('BACK')">BACK</button></div>
+                <div class="ui-block-b"><button data-theme="b" onclick="handleClick('MENU')">MENU</button></div>
+                <div class="ui-block-c"><button data-theme="b" onclick="handleClick('INFO')">INFO</button></div>
+              </div>
+
+              <div class="ui-grid-a"">
+                <div class="ui-block-a"><button data-theme="a" data-icon="arrow-d" data-iconpos="left" onclick="handleClick('CHAN_DOWN')">CHAN DN</button></div>
+                <div class="ui-block-b"><button data-theme="a"  data-icon="arrow-u" data-iconpos="right" onclick="handleClick('CHAN_UP')">CHAN UP</button></div>
+              </div>
+
+              <div class="ui-grid-b"">
                 <div class="ui-block-a"><button data-theme="c" onclick="handleClick('1')">1</button></div>
                 <div class="ui-block-b"><button data-theme="c" onclick="handleClick('2')">2 abc</button></div>
                 <div class="ui-block-c"><button data-theme="c" onclick="handleClick('3')">3 def</button></div>
-                <div class="ui-block-e"><button data-theme="b" onclick="handleClick('PREV')">PREV</button></div>
-                <div class="ui-block-e"><button data-theme="a" onclick="handleClick('UP')" data-icon="arrow-u" data-iconpos="right">UP</button></div>
 
                 <div class="ui-block-a"><button data-theme="c" onclick="handleClick('4')">4 ghi</button></div>
                 <div class="ui-block-b"><button data-theme="c" onclick="handleClick('5')">5 jkl</button></div>
                 <div class="ui-block-c"><button data-theme="c" onclick="handleClick('6')">6 mno</button></div>
-                <div class="ui-block-d"><button data-theme="e" onclick="handleClick('SELECT')">SEL</button></div>
-                <div class="ui-block-d"><button data-theme="a" onclick="handleClick('DOWN')" data-icon="arrow-d" data-iconpos="right">DN</button></div>
 
                 <div class="ui-block-a"><button data-theme="c" onclick="handleClick('7')">7 pqrs</button></div>
                 <div class="ui-block-b"><button data-theme="c" onclick="handleClick('8')">8 tuv</button></div>
                 <div class="ui-block-c"><button data-theme="c" onclick="handleClick('9')">9 wxyz</button></div>
-                <div class="ui-block-d"><button data-theme="a" onclick="handleClick('LEFT')" data-icon="arrow-l" data-iconpos="left">LT</button></div>
-                <div class="ui-block-e"><button data-theme="a" onclick="handleClick('RIGHT')" data-icon="arrow-r" data-iconpos="right">RT</button></div>
 
                 <div class="ui-block-a"><button data-theme="c" onclick="handleClick('DASH')">-</button></div>
                 <div class="ui-block-b"><button data-theme="c" onclick="handleClick('0')">0 _</button></div>
                 <div class="ui-block-c"><button data-theme="c" onclick="handleClick('ENTER')">ENTER</button></div>
-                <div class="ui-block-e"><button data-theme="a" onclick="handleClick('CHAN_DOWN')">CH DN</button></div>
-                <div class="ui-block-d"><button data-theme="a" onclick="handleClick('CHAN_UP')">CH UP</button></div>
               </div>
             </div>
 
